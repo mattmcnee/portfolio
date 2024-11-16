@@ -4,4 +4,9 @@
     height: calc(var(--vh-page-top-only, 1vh) * 100);
     overflow: hidden; /* Prevents overflow */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-  }
+}
+
+.linkedin-embed{
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+}
