@@ -4,7 +4,24 @@
     height: calc(var(--vh-page-top-only, 1vh) * 100);
     overflow: hidden; /* Prevents overflow */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    background-color: #f1f1e6;
+
+    .homepage-content {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        transform: translateY(calc(-50% + 30px));
+        z-index: 1; /* Ensures content is above the image */
+    }
 }
+
+
+
+
 
 .linkedin-embed{
     border: 1px solid rgba(0, 0, 0, 0.08);
