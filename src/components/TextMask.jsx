@@ -47,7 +47,7 @@ const TextMask = ({
           const color = wordColors[wordIndex];
           char.style.filter = "brightness(2)";
           // Apply the calculated opacity to the rgba color
-          char.style.textShadow = `0 0 20px ${color.replace(
+          char.style.textShadow = `0 0 10px ${color.replace(
             /rgba\((\d+), (\d+), (\d+), (\d+\.?\d*)\)/,
             (match, r, g, b) => `rgba(${r}, ${g}, ${b}, ${glowOpacity})`
           )}`;
@@ -100,17 +100,16 @@ const TextMask = ({
         cursor: "default",
       }}
     >
-      <h1
+      <span
         style={{
           fontSize: "4rem",
-          fontWeight: "bold",
           textTransform: "uppercase",
           opacity: textOpacity,
           display: "inline-block",
         }}
       >
         {renderText()}
-      </h1>
+      </span>
     </div>
   );
 };
