@@ -18,7 +18,13 @@ const Home = () => {
                 </div> 
             </div>
 
-            <TextMask/>
+            <TextMask backgroundColor="#fff" words={[
+                { text: "import", color: "purple" },
+                { text: "SPACE", color: "" },
+                { text: "Through", color: "turquoise" },
+                { text: "NEWLINE", color: "" },
+                { text: "Text", color: "green" }
+            ]}/>
 
             <ChatboxOverlay />
             {/* <iframe className='linkedin-embed' loading="lazy" src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7253018009873608704" height="848" width="504" frameBorder="0" allowFullScreen="" title="Embedded post"></iframe>
