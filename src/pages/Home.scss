@@ -1,0 +1,7 @@
+.homepage-banner {
+    position: relative;
+    width: 100%;
+    height: calc(var(--vh-page-top-only, 1vh) * 100);
+    overflow: hidden; /* Prevents overflow */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  }

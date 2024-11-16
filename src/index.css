@@ -20,3 +20,8 @@ textarea, input{
   font-size: inherit;
   font-family: inherit;
 }
+
+body{
+  margin: 0;
+  padding: 0;
+}
