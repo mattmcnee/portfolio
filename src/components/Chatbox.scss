@@ -1,6 +1,6 @@
 /* Chatbox.scss */
 .chatbox-overlay {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
@@ -86,36 +86,41 @@
 
 .message-container {
     display: flex;
-    align-items: flex-start;
     margin: 0.5rem 0;
-
-    &.assistant {
-        justify-content: flex-start;
-        margin-right: 80px;
-    }
+    justify-content: flex-start;
+    width: 100%;
 
     &.user {
         justify-content: flex-end;
-        margin-left: 80px;
     }
 }
 
 .message {
     display: inline-block;
-    padding: 0 14px;
+    padding: 0.5rem 14px;
     border-radius: 12px;
+    max-width: 85%;
+    word-wrap: break-word;
+    white-space: pre-wrap;
     width: fit-content;
+    text-align: left;
+    color: #111;
+    background-color: #DCDCDC;
 
-    &.assistant{
-        color: #111;
-        background-color: #DCDCDC;
-    }
-
-    &.user{
+    &.user {
         color: #fdfdfd;
         background-color: #4662b8;
     }
 }
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.04); }
+  }
+  
+  .message.loading {
+    animation: pulse 0.5s ease infinite;
+  }
 
 .chatbox-input {
     width: 100%;

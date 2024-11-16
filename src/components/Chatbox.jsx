@@ -104,8 +104,8 @@ const Chatbox = ({ preprompt, messages, setMessages, setIsChatOpen }) => {
                     </div>
                 ))}
                 {loading && (
-                    <div className="message-container assistant">
-                        <div className="message assistant">...</div>
+                    <div className="message-container loading">
+                        <div className="message loading">...</div>
                     </div>
                 )}
                 <div ref={messagesEndRef} />
