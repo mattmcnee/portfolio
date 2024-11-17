@@ -89,7 +89,7 @@ const Chatbox = ({ preprompt, messages, setMessages, setIsChatOpen }) => {
     useEffect(() => {
         setTimeout(() => {
             setLoadingFirstMessage(false);
-        }, 800);
+        }, 1200);
     }, []);
 
     return (

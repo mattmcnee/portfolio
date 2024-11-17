@@ -21,7 +21,7 @@ const Home = () => {
 
     return (
         <div>
-            <Navbar downloadCV={downloadCV} />
+            <Navbar />
             
 
             <div className="homepage-banner">
@@ -84,7 +84,7 @@ const Home = () => {
                 </ExperienceCard>
 
                 <ExperienceCard role="Officer Cadet"
-                    company="Manchester and Salford Universities' Air Squadron (MASUAS)"
+                    company="MASUAS"
                     type="Part-time"
                     dates="Sep 2021 - Aug 2023 · 2 yrs"
                     location="Manchester, England, United Kingdom"

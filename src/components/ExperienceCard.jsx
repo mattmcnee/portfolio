@@ -20,7 +20,7 @@ const ExperienceCard = ({
           margin: 0
         }}>{role}</h3>
         
-        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#4b5563' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#4b5563', alignItems: 'flex-start' }}>
           <span style={{ fontWeight: 500 }}>{company}</span>
           <span style={{ color: '#9ca3af' }}>·</span>
           <span>{type}</span>
