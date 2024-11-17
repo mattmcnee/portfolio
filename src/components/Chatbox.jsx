@@ -84,6 +84,14 @@ const Chatbox = ({ preprompt, messages, setMessages, setIsChatOpen }) => {
         }
     }, [messages, loading]);
 
+
+    const [loadingFirstMessage, setLoadingFirstMessage] = useState(true);
+    useEffect(() => {
+        setTimeout(() => {
+            setLoadingFirstMessage(false);
+        }, 800);
+    }, []);
+
     return (
         <>
             <img
@@ -95,9 +103,16 @@ const Chatbox = ({ preprompt, messages, setMessages, setIsChatOpen }) => {
             <div className="chatbox-header"></div>
             <div className="chatbox-corner"></div>
             <div className="chatbox-messages">
+                {!loadingFirstMessage || messages.length > 0 ? (
                 <div className="message-container assistant">
                     <div className="message assistant">{initialMessage}</div>
                 </div>
+                ) : (
+                    <div className="message-container loading">
+                        <div className="message loading">...</div>
+                    </div>
+                )}
+
                 {messages.map((msg, index) => (
                     <div key={index} className={`message-container ${msg.role}`}>
                         <div className={`message ${msg.role}`}>{msg.text}</div>
