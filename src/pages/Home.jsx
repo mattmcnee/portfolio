@@ -13,13 +13,16 @@ const Home = () => {
             
 
             <div className="homepage-banner">
+                <TextMask backgroundColor="#fff" words={codeTemplate}/>
                 <div className="homepage-content">
                     <Link to='/map' className="get-started-button">AI Interview</Link>
                     <div className='tagline'>Download CV</div>
                 </div> 
             </div>
 
-            <TextMask backgroundColor="#fff" words={codeTemplate}/>
+            Hello
+
+            
 
             <ChatboxOverlay />
             {/* <iframe className='linkedin-embed' loading="lazy" src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7253018009873608704" height="848" width="504" frameBorder="0" allowFullScreen="" title="Embedded post"></iframe>
