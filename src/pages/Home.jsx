@@ -21,7 +21,7 @@ const Home = () => {
 
     return (
         <div>
-            <Navbar />
+            <Navbar downloadCV={downloadCV} />
             
 
             <div className="homepage-banner">
@@ -174,14 +174,14 @@ const Home = () => {
                 </ProjectCard>
 
 
-                <div className="homepage-footer">Developed by <Link to='https://acyleris.com/'>Acyleris Web Design</Link></div>
+                
 
 
 
             </div>
 
             
-
+            <div className="homepage-footer">Developed by <Link to='https://acyleris.com/'>Acyleris Web Design</Link></div>
             <ChatboxOverlay isChatOpen={isChatOpen} setIsChatOpen={setIsChatOpen} />
             {/* <iframe className='linkedin-embed' loading="lazy" src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7253018009873608704" height="848" width="504" frameBorder="0" allowFullScreen="" title="Embedded post"></iframe>
             <iframe className='linkedin-embed' loading="lazy" src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7245151802453594113" height="787" width="504" frameBorder="0" allowFullScreen="" title="Embedded post"></iframe> */}

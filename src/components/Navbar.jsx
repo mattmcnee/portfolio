@@ -4,7 +4,7 @@ import './Navbar.scss';
 import menuIcon from '/src/assets/icons/menu.svg';
 
 
-const Navbar = () => {
+const Navbar = ({ downloadCV }) => {
   const navigate = useNavigate();
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -52,8 +52,8 @@ const Navbar = () => {
 
 const NavLinks = () => (
     <>
-        <Link to="/cv" className="navbar-link" onClick={() => setIsMenuOpen(false)}>CV</Link>
-        <Link to="/contact" className="navbar-link" onClick={() => setIsMenuOpen(false)}>Contact</Link>
+        <div className="navbar-link" onClick={downloadCV}>CV</div>
+        {/* <Link to="/contact" className="navbar-link" onClick={() => setIsMenuOpen(false)}>Contact</Link> */}
         <a href="https://github.com/mattmcnee" className="navbar-link" target="_blank" rel="noopener noreferrer">GitHub</a>
         <a href="https://www.linkedin.com/in/matthew-mcnee/" className="navbar-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
     </>
