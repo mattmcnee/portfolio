@@ -8,7 +8,8 @@ const colorToRGBA = (color) => {
     green: "rgba(111, 168, 136, 1)",
     yellow: "rgba(255, 255, 0, 1)",
     orange: "rgba(255, 165, 0, 1)",
-    black: "rgba(0, 0, 0, 1)", // Default color
+    red: "rgba(152, 63, 69, 1)",
+    black: "rgba(50, 50, 50, 1)", // Default color
   };
 
   return colors[color.toLowerCase()] || colors.black; // Default to black if not found
@@ -71,7 +72,7 @@ const TextMask = ({
   const renderText = () => {
     return adjustedWords.map((word, wordIndex) => {
       if (word.text === "SPACE") {
-        return <span key={wordIndex} style={{ display: "inline-block", width: "0.4rem" }} />;
+        return <span key={wordIndex} style={{ display: "inline-block", width: "0.3rem" }} />;
       } else if (word.text === "NEWLINE") {
         return <br key={wordIndex} />;
       }
