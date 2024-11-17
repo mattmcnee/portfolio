@@ -1,0 +1,49 @@
+.btn{
+    padding: 8px 12px;
+    background-color: #0a2612;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 10px 0;
+    text-align: left;
+    transition: transform 0.2s ease;
+    height: fit-content;
+    width: fit-content;
+
+    &:hover{
+        transform: scale(1.04);
+    }
+
+    &.btn-primary{
+        background-color: #0a2612;
+        color: white;
+    }
+
+    &.btn-secondary{
+        background-color: #575958;
+        color: white;
+    }
+
+    &.btn-tertiary{
+        background-color: transparent;
+        color: black;
+        padding: 8px 0px;
+    }
+
+    &.btn-text{
+        background-color: transparent;
+        color: black;
+        padding: 8px 0px;
+        margin: 2px 0px;
+
+        &:hover {
+            transform: scale(1.02);
+            span{
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+    }
+}

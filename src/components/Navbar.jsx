@@ -48,24 +48,16 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const NavLinks = () => (
+
+
+const NavLinks = () => (
     <>
-        {location.pathname !== '/' && (
-            <Link to="/" className="navbar-link" onClick={() => setIsMenuOpen(false)}>Home</Link>
-        )}
-        <Link to="/map" className="navbar-link" onClick={() => setIsMenuOpen(false)}>Map</Link>
-                
-        {location.pathname !== '/beta' && (
-            <Link to="/beta" className="navbar-link" onClick={() => setIsMenuOpen(false)}>Join Beta</Link>
-        )}
-        {location.pathname !== '/login' && (
-            <div onClick={handleLogin} className="navbar-link">Login</div>
-        )}
-        {location.pathname !== '/signup' && (
-            <div onClick={handleSignup} className="navbar-link">Sign up</div>
-        )}
+        <Link to="/cv" className="navbar-link" onClick={() => setIsMenuOpen(false)}>CV</Link>
+        <Link to="/contact" className="navbar-link" onClick={() => setIsMenuOpen(false)}>Contact</Link>
+        <a href="https://github.com/mattmcnee" className="navbar-link" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/matthew-mcnee/" className="navbar-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
     </>
-  );
+);
 
   return (
     <div className="navbar-container">

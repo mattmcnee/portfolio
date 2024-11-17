@@ -49,7 +49,7 @@ const TextMask = ({
           Math.pow(charX - event.clientX, 2) + Math.pow(charY - event.clientY, 2)
         );
 
-        const maxDistance = 150;
+        const maxDistance = 160;
         const opacity =
           (distance > maxDistance ? 0 : Math.max(0, 1 - distance / maxDistance));
 
@@ -108,7 +108,7 @@ const TextMask = ({
       style={{
         backgroundColor: "transparent",
         position: "relative",
-        padding: "4rem 2rem 2rem 2rem",
+        padding: "4rem 2rem 2rem 4rem",
         cursor: "default",
         height: "100%",
         overflow: "hidden",
