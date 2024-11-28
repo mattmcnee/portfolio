@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { api } from '/src/utils/api';
 import { splitIntoSentences, cleanMessage, getGreeting } from '/src/utils/textProcessing';
 import closeIcon from '/src/assets/icons/close.svg';
+import sendIcon from '/src/assets/icons/send.svg';
 
 const Chatbox = ({ preprompt, messages, setMessages, setIsChatOpen }) => {
     const [input, setInput] = useState('');
@@ -125,14 +126,23 @@ const Chatbox = ({ preprompt, messages, setMessages, setIsChatOpen }) => {
                 )}
                 <div ref={messagesEndRef} />
             </div>
-            <input
-                type="text"
-                value={input}
-                onChange={(e) => setInput(e.target.value)}
-                placeholder="Type your message..."
-                onKeyDown={(e) => e.key === 'Enter' && handleSend()}
-                className="chatbox-input"
-            />
+            <div className='bottom-input'>
+                <input
+                    type="text"
+                    value={input}
+                    onChange={(e) => setInput(e.target.value)}
+                    placeholder="Type your message..."
+                    onKeyDown={(e) => e.key === 'Enter' && handleSend()}
+                    className="chatbox-input"
+                />
+                <button onClick={handleSend} className="chatbox-submit">
+                <img
+                    src={sendIcon}
+                    alt="Send message"
+                    className="send-message"
+                />
+                </button>
+            </div>
         </>
     );
 };

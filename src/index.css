@@ -16,7 +16,7 @@
   box-sizing: border-box;
 }
 
-textarea, input{
+textarea, input, button{
   font-size: inherit;
   font-family: inherit;
 }

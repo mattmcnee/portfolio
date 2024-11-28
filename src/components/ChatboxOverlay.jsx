@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import chatIcon from '/src/assets/icons/chat.svg';
 import Chatbox from '/src/components/Chatbox';
 
@@ -6,6 +6,7 @@ import './Chatbox.scss';
 
 const ChatboxOverlay = ({ setIsChatOpen, isChatOpen}) => {
     const [messages, setMessages] = useState([]);
+    const [isKeyboardVisible, setIsKeyboardVisible] = useState(false);
     const preprompt = `You are a candidate in a job interview answering questions. 
     Potential relevant context is provided in the user's most recent question. MIRROR the TONE of this context. DO NOT claim to have experience not listed in this. DO NOT include the context UNLESS it addresses the user's message. 
     Use ONLY the conversation history or relevant details about yourself in this context to answer questions. IF greeted or thanked, respond politely without requiring context; DO NOT USE "!"
@@ -19,7 +20,7 @@ const ChatboxOverlay = ({ setIsChatOpen, isChatOpen}) => {
         <div className="chatbox-overlay">
             <div className="chatbox-container">
             {isChatOpen ? (
-                <div className="chatbox">
+                <div className={`chatbox`}>
                     <Chatbox preprompt={preprompt} messages={messages} setMessages={setMessages} setIsChatOpen={setIsChatOpen}/>
                 </div>
                 ) : (
